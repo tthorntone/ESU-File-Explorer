@@ -1,0 +1,1 @@
+ilmerge /target:winexe /out:SelfContainedProgram.exe WindowsFormsApplication1.exe HtmlAgilityPack.dll

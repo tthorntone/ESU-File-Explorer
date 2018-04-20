@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DF21F42F-778A-4709-BBD1-D632AC58B391}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Plugin</RootNamespace>
+    <AssemblyName>Plugin_NEW</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plugin_NEW.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Interface\Interface.csproj">
+      <Project>{d35ea7d7-eb99-42a8-97f6-4158cb88c08a}</Project>
+      <Name>Interface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\acrobat.png" />
+    <Content Include="Resources\after effects.png" />
+    <Content Include="Resources\archive.png" />
+    <Content Include="Resources\audition.png" />
+    <Content Include="Resources\css.png" />
+    <Content Include="Resources\dreamweaver.png" />
+    <Content Include="Resources\empty.png" />
+    <Content Include="Resources\excel.png" />
+    <Content Include="Resources\executable.png" />
+    <Content Include="Resources\fireworks.png" />
+    <Content Include="Resources\flash.png" />
+    <Content Include="Resources\folder.png" />
+    <Content Include="Resources\gif.png" />
+    <Content Include="Resources\html.png" />
+    <Content Include="Resources\illustrator.png" />
+    <Content Include="Resources\indesign.png" />
+    <Content Include="Resources\jpg.png" />
+    <Content Include="Resources\js.png" />
+    <Content Include="Resources\music.png" />
+    <Content Include="Resources\otf.png" />
+    <Content Include="Resources\photoshop.png" />
+    <Content Include="Resources\php.png" />
+    <Content Include="Resources\png.png" />
+    <Content Include="Resources\powerpoint.png" />
+    <Content Include="Resources\premiere pro.png" />
+    <Content Include="Resources\svg.png" />
+    <Content Include="Resources\torrent.png" />
+    <Content Include="Resources\ttf.png" />
+    <Content Include="Resources\txt.png" />
+    <Content Include="Resources\video.png" />
+    <Content Include="Resources\wav.png" />
+    <Content Include="Resources\word.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>rem copy "$(TargetPath)" "$(SolutionDir)$(SolutionName)\bin\debug\$(TargetFileName)"
+copy "$(TargetPath)" "$(SolutionDir)$(SolutionName)\Resources\ImageLoader.dll"
+copy "$(TargetPath)" "$(SolutionDir)$(SolutionName)\bin\debug\ImageLoader.dll"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

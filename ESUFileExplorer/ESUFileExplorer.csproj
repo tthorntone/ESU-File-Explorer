@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B55E4E11-9C06-42F8-B2EF-5B7B0535AC1F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ESUFileExplorer</RootNamespace>
+    <AssemblyName>ESUFileExplorer</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddBookmarkWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBookmarkWindow.Designer.cs">
+      <DependentUpon>AddBookmarkWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Properties\Icons.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Icons.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\DLLs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DLLs.resx</DependentUpon>
+    </Compile>
+    <Compile Include="DownloadWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DownloadWindow.Designer.cs">
+      <DependentUpon>DownloadWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DropTools.cs" />
+    <Compile Include="EditScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditScreen.designer.cs">
+      <DependentUpon>EditScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileDownloadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileDownloadForm.Designer.cs">
+      <DependentUpon>FileDownloadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileExplorerWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileExplorerWindow.Designer.cs">
+      <DependentUpon>FileExplorerWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterInfo.cs" />
+    <Compile Include="History.cs" />
+    <Compile Include="AdvancedFindForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdvancedFindForm.Designer.cs">
+      <DependentUpon>AdvancedFindForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginWindow.Designer.cs">
+      <DependentUpon>LoginWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MEFHelper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SettingsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsWindow.Designer.cs">
+      <DependentUpon>SettingsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SizeSuffixTools.cs" />
+    <Compile Include="AppExtensions.cs" />
+    <EmbeddedResource Include="AddBookmarkWindow.resx">
+      <DependentUpon>AddBookmarkWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Icons.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Icons.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\DLLs.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DLLs.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadWindow.resx">
+      <DependentUpon>DownloadWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditScreen.resx">
+      <DependentUpon>EditScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileDownloadForm.resx">
+      <DependentUpon>FileDownloadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileExplorerWindow.resx">
+      <DependentUpon>FileExplorerWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdvancedFindForm.resx">
+      <DependentUpon>AdvancedFindForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginWindow.resx">
+      <DependentUpon>LoginWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Images.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Images.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Images.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Images.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SettingsWindow.resx">
+      <DependentUpon>SettingsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ESUFileExplorer.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\esu_logo_large.png" />
+    <None Include="Resources\back_black.png" />
+    <None Include="Resources\refresh_black.png" />
+    <None Include="Resources\forward_black.png" />
+    <None Include="Resources\down_black.png" />
+    <None Include="Resources\close_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImageLoader.dll" />
+    <None Include="Resources\create_folder.ico" />
+    <Content Include="Resources\empty.png" />
+    <None Include="Resources\shortcut.ico" />
+    <None Include="Resources\folder.ico" />
+    <Content Include="Resources\HtmlAgilityPack.dll" />
+    <None Include="Resources\Interface.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Interface\Interface.csproj">
+      <Project>{d35ea7d7-eb99-42a8-97f6-4158cb88c08a}</Project>
+      <Name>Interface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
